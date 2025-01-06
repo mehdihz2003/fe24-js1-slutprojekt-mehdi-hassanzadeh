@@ -41,6 +41,7 @@
   border-radius: 4px;
 }
 
+/* ChatGPT - how to change styling depending on screensize */
 @media (max-width: 600px) {
   .title {
     font-size: 1.2rem;

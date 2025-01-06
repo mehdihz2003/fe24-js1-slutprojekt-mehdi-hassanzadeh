@@ -24,7 +24,7 @@ export function display10Movies(movies, containerDiv) {
     }
 }
 
-//ChatGPT - this || that - truthy or falsy
+//ChatGPT - ternary operator
 export function displaySearch(searchResults, containerDiv) {
     containerDiv.innerHTML = '';
 
@@ -62,17 +62,23 @@ export function displaySearch(searchResults, containerDiv) {
             knownFor.textContent = result.known_for_department;
 
             info.append(name, knownFor);
-            
+
             for (const popularWorks of result.known_for) {
                 const work = document.createElement('h6');
-                work.textContent = popularWorks.media_type == 'movie' ? popularWorks.title : popularWorks.name;
+                work.textContent = popularWorks.media_type == 'movie' ? `Movie: ${popularWorks.title}` : `TV: ${popularWorks.name}`;
                 
                 info.append(work);
             }
         }
 
-
         resultContainer.append(img, info);
         containerDiv.append(resultContainer);
     }
+}
+
+export function displayError(message, containerDiv) {
+    const errorDiv = document.createElement('div');
+    errorDiv.classList.add('error-message');
+    errorDiv.textContent = message;
+    containerDiv.appendChild(errorDiv);
 }
