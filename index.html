@@ -7,10 +7,10 @@
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header_style.css">
-    <link rel="stylesheet" href="./css/movie_container.css">
+    <link rel="stylesheet" href="./css/result_container.css">
 
     <script src="./js/anime.min.js" defer></script>
-    <script src="./js/script.js" defer></script>
+    <script src="./js/main.js" type="module" defer></script>
 </head>
 <body>
     <header class="header">
@@ -18,13 +18,15 @@
           <button id="topRated" class="btn">Top Rated</button>
           <button id="popular" class="btn">Popular</button>
         </div>
+
         <h1 class="title">Couch Potato</h1>
+        
         <div class="right-section">
-          <input type="text" class="search-field" placeholder="Search...">
+          <input type="text" id="searchField" class="search-field" placeholder="Search...">
         </div>
       </header>
-      <div id="container">
 
-      </div>
+      <div id="loading" class="loading hidden"></div>
+      <div id="container"></div>
 </body>
 </html>
