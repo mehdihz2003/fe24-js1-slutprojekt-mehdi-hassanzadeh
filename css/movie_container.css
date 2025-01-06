@@ -1,0 +1,14 @@
+.movie-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.movie-image {
+  width: 150px;
+  height: auto;
+}
+
+.movie-info {
+  font-size: 14px;
+}
