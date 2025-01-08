@@ -45,7 +45,7 @@ export function displaySearch(searchResults, containerDiv) {
             overview.textContent = result.overview;
         
             const title = document.createElement('h2');
-            title.textContent = result.media_type == 'movie' ? result.title : result.name;
+            title.textContent = result.media_type == 'movie' ? `Movie: ${result.title}`  : `TV: ${result.name}`;
         
             const releaseDate = document.createElement('p');
             releaseDate.textContent = result.media_type == 'movie' ? result.release_date : result.first_air_date;
